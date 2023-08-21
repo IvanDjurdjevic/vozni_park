@@ -1,0 +1,118 @@
+body {
+    height: 100%;
+    --stripe: #1b1002c7;
+    --bg: #ff91000c;
+  
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+      linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+      linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
+}
+h1{
+    text-align: center;
+    color:dodgerblue
+}
+h2{
+    text-align: left;
+    font-style: italic;
+    font-size: 18px;
+    color:rgb(242, 241, 247);
+}
+form{
+    width: 50%;
+}
+label {
+    display: block;
+    margin-bottom: .25rem;
+    align-items: center;
+    color: rgb(162, 226, 43);
+    font-size: 22px;
+}
+input {
+    display: block;
+    width: 500px;
+    align-items: center;
+    border: 3px solid yellow;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgba(255, 0, 51, 0.5);
+}
+input:focus{
+    outline: 3px solid rgb(204, 0, 255);
+}
+input::placeholder{
+    color: aqua;
+    opacity: 1;
+}
+.form_row {
+    margin-bottom: 1rem;
+}
+
+
+button{
+    background-color: rgba(255, 0, 51, 0.5);
+    border: 3px solid green;
+    border-radius: 70%;
+    padding: 20px;
+    font-size: 25px;
+    font-style: italic;
+    margin: 4px 12px;
+    cursor:pointer;
+    transition: all 1.5s;
+    color:mistyrose;
+}
+button:hover{
+    background-color: blue;
+    color: rgb(255, 251, 0);
+}
+
+.div_right {
+    width: 50%;
+    position: relative;
+    font-size: 22px;
+    color: rgb(184, 184, 222);
+    font-family: fantasy;
+}
+
+table{
+    width: 100%
+}
+th, td {
+    /* border: 2px solid; */
+    border-collapse: collapse;
+    height: 25px;
+    color: cornflowerblue;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fffb00a6
+}
+th {
+    background-color: yellowgreen;
+}
+tr {
+    border: 2px solid red;
+    border-collapse: collapse;
+    color: green;
+    text-align: center;
+}
+tr:hover {
+    background-color: coral;
+}
+tr:nth-child(even) {
+    background-color: #fffb00a6;
+}
+tr:nth-child(even):hover {
+    background-color: coral;
+}
+
+.dizajn {
+    display: flex;
+}
+
+.dizajn_tabela {
+    display: block;
+}

@@ -1,0 +1,11 @@
+{
+  "tablica": { "name": "tablica" },
+  "marka": { "name": "marka" },
+  "godiste": { "name": "godiste" },
+  "kilometraza": { "name": "kilometraza" },
+  "dugme": { "className": "css-button-gradient--6" },
+  "tabela1": {"id": "tabela"},
+  "tabela2": {"id": "tabela2"},
+  "tabela3": {"id": "tabela3"},
+  "theSecondCar": {"id": "obrisiT3_2"}
+}

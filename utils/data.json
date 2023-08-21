@@ -1,0 +1,96 @@
+{
+  "test1": {
+    "tablica": "KG-123-ID",
+    "marka": "Yugo",
+    "godina": "1968",
+    "kilometraza": "55000"
+  },
+  "test2": {
+    "tablica1": "BG-123-MM",
+    "marka1": "Mercedes",
+    "godina1": "2021",
+    "kilometraza1": "4000",
+    "tablica2": "BG-123-FF",
+    "marka2": "Fiat",
+    "godina2": "2012",
+    "kilometraza2": "6655",
+    "tablica3": "BG-123-AA",
+    "marka3": "Audi",
+    "godina3": "1985",
+    "kilometraza3": "55000"
+  },
+  "test3": {
+    "tablica": "BG-123-MM",
+    "marka": "Mercedes",
+    "godina": "2021",
+    "alertMessageEmptyFields": "Sva polja MORAJU biti popunjena!"
+  },
+  "test4": {
+    "tablica": "BG-123-ČČ",
+    "marka": "Mclaren",
+    "godina": "2015",
+    "kilometraza": "11000"
+  },
+  "test5": {
+    "tablica1": "BG-123-MM",
+    "marka1": "Mercedes",
+    "godina1": "2021",
+    "kilometraza1": "4000",
+    "tablica2": "BG-123-MM",
+    "marka2": "Fiat",
+    "godina2": "2012",
+    "kilometraza2": "6655",
+    "alertSameLicensePlate": "U voznom parku vec POSTOJI automobil sa registarskom oznakom koju ste upravo uneli!"
+  },
+  "test6": {
+    "tablica": "BG-123-MM",
+    "marka": "Mercedes",
+    "godina": "2021",
+    "kilometraza": "4000",
+    "alertSameCars": "Auto koji ste uneli vec POSTOJI u voznom parku!"
+  },
+  "test7": {
+    "tablica": "BG-123-Mp",
+    "marka": "Mercedes",
+    "godina": "2021",
+    "kilometraza": "4000",
+    "alertWrongLicensePlate": "Pogrešno ste uneli oznaku tablice!\nUneli ste: BG-123-Mp\nPrimer pravilnog unosa: NS-123-ŽG ili BĐ-1234-NS"
+  },
+  "test8": {
+    "tablica": "BG-1236-MP",
+    "marka": "BMW",
+    "godina": "2021",
+    "kilometraza": "-400",
+    "alertMileageLessThanZero": "Pogrešno je uneta kilometraža, jer je -400 negativan broj."
+  },
+  "test9": {
+    "tablica": "KG-123-PD",
+    "marka": "Yugo",
+    "godina": "1871",
+    "kilometraza": "28500",
+    "alertWrongYear": "Pogrešno ste uneli godište automobila!\nUneli ste: 1871\nPrimer pravilnog unosa i raspona godina: 1884 do 2023"
+  },
+  "test10": {
+    "tablica": "KG-123-P",
+    "godina": "2211",
+    "kilometraza": "-50",
+    "alertWrongLicensePlate": "Pogrešno ste uneli oznaku tablice!\nUneli ste: KG-123-P\nPrimer pravilnog unosa: NS-123-ŽG ili BĐ-1234-NS",
+    "alertWrongYear": "Pogrešno ste uneli godište automobila!\nUneli ste: 2211\nPrimer pravilnog unosa i raspona godina: 1884 do 2023",
+    "alertMileageLessThanZero": "Pogrešno je uneta kilometraža, jer je -50 negativan broj.",
+    "alertMessageEmptyFields": "Sva polja MORAJU biti popunjena!"
+  },
+  "test11": {
+    "tablica1": "KG-123-MM",
+    "marka1": "Yugo",
+    "godina1": "1968",
+    "kilometraza1": "120000",
+    "tablica2": "NS-123-FF",
+    "marka2": "YFiat",
+    "godina2": "1975",
+    "kilometraza2": "90000",
+    "tablica3": "BG-123-AA",
+    "marka3": "Golf",
+    "godina3": "2001",
+    "kilometraza3": "55000"
+  }
+}

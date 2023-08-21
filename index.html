@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vozzni park</title>
+</head>
+
+<body>
+    <h1>VOZNI PARK - "Žikina Šarenica"</h1>
+    <h2>
+        <ul>
+            <li>
+                U polje "Registarska tablica" omogućeno je da se unose sva latičnična slova po abecednom redu sve sa
+                ČĆŽŠĐ. Takođe omogućen je unos custom tablica tako što se posle znaka "-" može uneti od tri do pet
+                znakova u kombinaciji slova i brojeva. Velika slova su validan unos!
+            </li>
+            <li>
+                U polje "Marka automobila" se može uneti bilo šta, pošto se ne vrši nikakva kontrola, izuzev toga što ne
+                može ništa da se submituje.
+            </li>
+            <li>
+                U polje "Godište automobila" omogućeno je da se unese godina proizvodnje automobila u formatu od četiri
+                cifre i to u rasponu od 1884. godine do 2022. godine. Godina se upisuje isključivo sa četiri spojene
+                cifre bez ikakvih dodatnih znakova!
+            </li>
+            <li>
+                Dodata funkcionalnost "uklanjanja vozila", pritiskom na taster Obrisi uklanja se ispisan red iz tabele,
+                kao i odgovarajući objekat iz niza sa istim tim podacima iz uklonjenog reda.
+            </li>
+        </ul>
+    </h2>
+    <div class="dizajn">
+        <form method="post">
+            <div class="form_row">
+                <label>Registarska tablica</label>
+                <input name="tablica" placeholder="Format tablice: NS-123-ŽG ili BĐ-1234-NS">
+            </div>
+            <div class="form_row">
+                <label>Marka automobila</label>
+                <input name="marka" placeholder="Marka automobila">
+            </div>
+            <div class="form_row">
+                <label>Godiste automobila</label>
+                <input name="godiste" placeholder="Format godine i raspon: 1884 - 2023">
+            </div>
+            <div class="form_row">
+                <label>Pređena kilometraža</label>
+                <input type="number" name="kilometraza" placeholder="Broj izražen u kilometrima">
+            </div>
+            <div>
+                <button class="css-button-gradient--6" type="submit">DODAJ AUTOMOBIL</button>
+            </div>
+        </form>
+        <div class="dizajn_tabela">
+            <div class="div_right">Kilometraža manja od 5.000km:
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Registarska tablica</th>
+                            <th>Marka</th>
+                            <th>Godiste</th>
+                            <th>Kilometraža</th>
+                            <th>Ukloni vozilo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela">
+                    </tbody>
+                </table>
+            </div>
+            <div class="div_right">Kilometraža između 5.000 i 15.000km:
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Registarska tablica</th>
+                            <th>Marka</th>
+                            <th>Godiste</th>
+                            <th>Kilometraža</th>
+                            <th>Ukloni vozilo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="div_right">Kilometraža preko 15.000km:
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Registarska tablica</th>
+                            <th>Marka</th>
+                            <th>Godiste</th>
+                            <th>Kilometraža</th>
+                            <th>Ukloni vozilo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela3">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
