@@ -13,6 +13,14 @@ class VozniParkPage extends BasePage {
 
         return rowCount
     }
+
+    async addCar(lTable, dTable, lMark, dMark, lAge, dAge, lMileage, dMileage, button) {
+        await this.findAndSendKeys(lTable, dTable);
+        await this.findAndSendKeys(lMark, dMark);
+        await this.findAndSendKeys(lAge, dAge);
+        await this.findAndSendKeys(lMileage, dMileage);
+        await this.findAndClick(button);
+    }
 }
 
 module.exports = VozniParkPage 

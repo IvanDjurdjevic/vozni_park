@@ -27,31 +27,19 @@ describe('Test my Vozni park', async function () {
         await validation.sleep(2);
     })
     it('Correct validation one car', async function () {
-        await validation.findAndSendKeys(locator.tablica, data.test1.tablica);
-        await validation.findAndSendKeys(locator.marka, data.test1.marka);
-        await validation.findAndSendKeys(locator.godiste, data.test1.godina);
-        await validation.findAndSendKeys(locator.kilometraza, data.test1.kilometraza);
-        await validation.findAndClick(locator.dugme);
+        await validation.addCar(locator.tablica, data.test1.tablica, locator.marka, data.test1.marka, 
+            locator.godiste, data.test1.godina, locator.kilometraza, data.test1.kilometraza, locator.dugme);
         await validation.sleep(4);
         const rowCount = await validation.numberOfRowsTr(locator.tabela3);
         assert.equal(rowCount, 1);
     })
     it('Add cars to each table', async function () {
-        await validation.findAndSendKeys(locator.tablica, data.test2.tablica1);
-        await validation.findAndSendKeys(locator.marka, data.test2.marka1);
-        await validation.findAndSendKeys(locator.godiste, data.test2.godina1);
-        await validation.findAndSendKeys(locator.kilometraza, data.test2.kilometraza1);
-        await validation.findAndClick(locator.dugme);
-        await validation.findAndSendKeys(locator.tablica, data.test2.tablica2);
-        await validation.findAndSendKeys(locator.marka, data.test2.marka2);
-        await validation.findAndSendKeys(locator.godiste, data.test2.godina2);
-        await validation.findAndSendKeys(locator.kilometraza, data.test2.kilometraza2);
-        await validation.findAndClick(locator.dugme);
-        await validation.findAndSendKeys(locator.tablica, data.test2.tablica3);
-        await validation.findAndSendKeys(locator.marka, data.test2.marka3);
-        await validation.findAndSendKeys(locator.godiste, data.test2.godina3);
-        await validation.findAndSendKeys(locator.kilometraza, data.test2.kilometraza3);
-        await validation.findAndClick(locator.dugme);
+        await validation.addCar(locator.tablica, data.test2.tablica1, locator.marka, data.test2.marka1, 
+            locator.godiste, data.test2.godina1, locator.kilometraza, data.test2.kilometraza1, locator.dugme);
+        await validation.addCar(locator.tablica, data.test2.tablica2, locator.marka, data.test2.marka2, 
+            locator.godiste, data.test2.godina2, locator.kilometraza, data.test2.kilometraza2, locator.dugme);
+        await validation.addCar(locator.tablica, data.test2.tablica3, locator.marka, data.test2.marka3, 
+            locator.godiste, data.test2.godina3, locator.kilometraza, data.test2.kilometraza3, locator.dugme);
         await validation.sleep(4);
         const rowCount1 = await validation.numberOfRowsTr(locator.tabela1);
         const rowCount2 = await validation.numberOfRowsTr(locator.tabela2);
@@ -77,75 +65,51 @@ describe('Test my Vozni park', async function () {
         const alert = await driver.switchTo().alert();
         await alert.accept(); // close alert
         await validation.sleep(2);
-        await validation.findAndSendKeys(locator.tablica, data.test4.tablica);
-        await validation.findAndSendKeys(locator.marka, data.test4.marka);
-        await validation.findAndSendKeys(locator.godiste, data.test4.godina);
-        await validation.findAndSendKeys(locator.kilometraza, data.test4.kilometraza);
-        await validation.findAndClick(locator.dugme);
+        await validation.addCar(locator.tablica, data.test4.tablica, locator.marka, data.test4.marka, 
+            locator.godiste, data.test4.godina, locator.kilometraza, data.test4.kilometraza, locator.dugme);
         await validation.sleep(2);
         const rowCount = await validation.numberOfRowsTr(locator.tabela2);
         assert.equal(rowCount, 1);
     })
     it('Two cars with same license plate', async function () {
-        await validation.findAndSendKeys(locator.tablica, data.test5.tablica1);
-        await validation.findAndSendKeys(locator.marka, data.test5.marka1);
-        await validation.findAndSendKeys(locator.godiste, data.test5.godina1);
-        await validation.findAndSendKeys(locator.kilometraza, data.test5.kilometraza1);
-        await validation.findAndClick(locator.dugme);
-        await validation.findAndSendKeys(locator.tablica, data.test5.tablica2);
-        await validation.findAndSendKeys(locator.marka, data.test5.marka2);
-        await validation.findAndSendKeys(locator.godiste, data.test5.godina2);
-        await validation.findAndSendKeys(locator.kilometraza, data.test5.kilometraza2);
-        await validation.findAndClick(locator.dugme);
+        await validation.addCar(locator.tablica, data.test5.tablica1, locator.marka, data.test5.marka1, 
+            locator.godiste, data.test5.godina1, locator.kilometraza, data.test5.kilometraza1, locator.dugme);
+        await validation.addCar(locator.tablica, data.test5.tablica2, locator.marka, data.test5.marka2, 
+            locator.godiste, data.test5.godina2, locator.kilometraza, data.test5.kilometraza2, locator.dugme);
         await validation.sleep(2);
         const alert = await driver.switchTo().alert();
         const alertText = await alert.getText();
         assert.equal(data.test5.alertSameLicensePlate, alertText);
     })
     it('Two same cars', async function () {
-        await validation.findAndSendKeys(locator.tablica, data.test6.tablica);
-        await validation.findAndSendKeys(locator.marka, data.test6.marka);
-        await validation.findAndSendKeys(locator.godiste, data.test6.godina);
-        await validation.findAndSendKeys(locator.kilometraza, data.test6.kilometraza)
-        await validation.findAndClick(locator.dugme);
-        await validation.findAndSendKeys(locator.tablica, data.test6.tablica);
-        await validation.findAndSendKeys(locator.marka, data.test6.marka);
-        await validation.findAndSendKeys(locator.godiste, data.test6.godina);
-        await validation.findAndSendKeys(locator.kilometraza, data.test6.kilometraza)
-        await validation.findAndClick(locator.dugme);
+        await validation.addCar(locator.tablica, data.test6.tablica, locator.marka, data.test6.marka, 
+            locator.godiste, data.test6.godina, locator.kilometraza, data.test6.kilometraza, locator.dugme);
+        await validation.addCar(locator.tablica, data.test6.tablica, locator.marka, data.test6.marka, 
+            locator.godiste, data.test6.godina, locator.kilometraza, data.test6.kilometraza, locator.dugme);
         await validation.sleep(3);
         const alert = await driver.switchTo().alert(); // go to alert
         const alertText = await alert.getText();
         assert.equal(data.test6.alertSameCars, alertText);
     })
-    it('Car with wrong license plate', async function () { 
-        await validation.findAndSendKeys(locator.tablica, data.test7.tablica);
-        await validation.findAndSendKeys(locator.marka, data.test7.marka);
-        await validation.findAndSendKeys(locator.godiste, data.test7.godina);
-        await validation.findAndSendKeys(locator.kilometraza, data.test7.kilometraza)
-        await validation.findAndClick(locator.dugme);
+    it('Car with wrong license plate', async function () {
+        await validation.addCar(locator.tablica, data.test7.tablica, locator.marka, data.test7.marka, 
+            locator.godiste, data.test7.godina, locator.kilometraza, data.test7.kilometraza, locator.dugme);
         await validation.sleep(3);
         const alert = await driver.switchTo().alert();
         const alertText = await alert.getText();
         assert.equal(data.test7.alertWrongLicensePlate, alertText);
     })
     it('Mileage is less than zero', async function () {
-        await validation.findAndSendKeys(locator.tablica, data.test8.tablica);
-        await validation.findAndSendKeys(locator.marka, data.test8.marka);
-        await validation.findAndSendKeys(locator.godiste, data.test8.godina);
-        await validation.findAndSendKeys(locator.kilometraza, data.test8.kilometraza)
-        await validation.findAndClick(locator.dugme);
+        await validation.addCar(locator.tablica, data.test8.tablica, locator.marka, data.test8.marka, 
+            locator.godiste, data.test8.godina, locator.kilometraza, data.test8.kilometraza, locator.dugme);
         await validation.sleep(3);
         const alert = await driver.switchTo().alert();
         const alertText = await alert.getText();
         assert.equal(data.test8.alertMileageLessThanZero, alertText);
     })
     it('Wrong year of the car', async function () {
-        await validation.findAndSendKeys(locator.tablica, data.test9.tablica);
-        await validation.findAndSendKeys(locator.marka, data.test9.marka);
-        await validation.findAndSendKeys(locator.godiste, data.test9.godina);
-        await validation.findAndSendKeys(locator.kilometraza, data.test9.kilometraza)
-        await validation.findAndClick(locator.dugme);
+        await validation.addCar(locator.tablica, data.test9.tablica, locator.marka, data.test9.marka, 
+            locator.godiste, data.test9.godina, locator.kilometraza, data.test9.kilometraza, locator.dugme);
         await validation.sleep(3);
         const alert = await driver.switchTo().alert();
         const alertText = await alert.getText();
@@ -178,21 +142,12 @@ describe('Test my Vozni park', async function () {
         await alert4.accept();
     })
     it('Delete the second car in the third table where are three cars', async function () {
-        await validation.findAndSendKeys(locator.tablica, data.test11.tablica1);
-        await validation.findAndSendKeys(locator.marka, data.test11.marka1);
-        await validation.findAndSendKeys(locator.godiste, data.test11.godina1);
-        await validation.findAndSendKeys(locator.kilometraza, data.test11.kilometraza1);
-        await validation.findAndClick(locator.dugme);
-        await validation.findAndSendKeys(locator.tablica, data.test11.tablica2);
-        await validation.findAndSendKeys(locator.marka, data.test11.marka2);
-        await validation.findAndSendKeys(locator.godiste, data.test11.godina2);
-        await validation.findAndSendKeys(locator.kilometraza, data.test11.kilometraza2);
-        await validation.findAndClick(locator.dugme);
-        await validation.findAndSendKeys(locator.tablica, data.test11.tablica3);
-        await validation.findAndSendKeys(locator.marka, data.test11.marka3);
-        await validation.findAndSendKeys(locator.godiste, data.test11.godina3);
-        await validation.findAndSendKeys(locator.kilometraza, data.test11.kilometraza3);
-        await validation.findAndClick(locator.dugme);
+        await validation.addCar(locator.tablica, data.test11.tablica1, locator.marka, data.test11.marka1, 
+            locator.godiste, data.test11.godina1, locator.kilometraza, data.test11.kilometraza1, locator.dugme);
+        await validation.addCar(locator.tablica, data.test11.tablica2, locator.marka, data.test11.marka2, 
+            locator.godiste, data.test11.godina2, locator.kilometraza, data.test11.kilometraza2, locator.dugme);
+        await validation.addCar(locator.tablica, data.test11.tablica3, locator.marka, data.test11.marka3, 
+             locator.godiste, data.test11.godina3, locator.kilometraza, data.test11.kilometraza3, locator.dugme);
         await validation.sleep(4);
         const rowCount = await validation.numberOfRowsTr(locator.tabela3);
         assert.equal(rowCount, 3);
